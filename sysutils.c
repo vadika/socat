@@ -334,6 +334,8 @@ int sockaddr_vm_parse(struct sockaddr_vm *sa, const char *cid_str,
       }
    }
 
+   sa->svm_flags = VMADDR_FLAG_TO_HOST;
+   
    return 0;
 }
 #endif /* WITH_IP4 */
